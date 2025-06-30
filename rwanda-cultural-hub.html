@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urugamba Arts | Preserving Rwanda's Living Heritage</title>
+    <meta name="description" content="Documenting and revitalizing traditional Rwandan art forms through digital innovation and community empowerment">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rwanda: {
+                            green: "#006A4E",
+                            yellow: "#FCD116",
+                            red: "#C8102E",
+                            brown: "#5E2C04",
+                            cream: "#F5E8C7"
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['"Kigelia African"', 'serif']
+                    },
+                    backgroundImage: {
+                        'imigongo': "url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIGZpbGw9IiMwMDZBNEUiLz48cmVjdCB4PSI1MCIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiBmaWxsPSIjRkNEMTE2Ii8+PHJlY3QgeT0iNTAiIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0iI0M4MTAyRSIvPjxyZWN0IHg9IjUwIiB5PSI1MCIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiBmaWxsPSIjNUUyQzA0Ii8+PC9zdmc+')"
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        @import url('https://fonts.cdnfonts.com/css/kigelia-african');
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 106, 78, 0.8), rgba(0, 106, 78, 0.8)), 
+                        url('https://www.newtimes.co.rw/sites/default/files/styles/mystyle/public/main/articles/2019/09/17/imigongo.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .art-card {
+            transition: all 0.3s ease;
+            background-color: #F5E8C7;
+            border: 2px solid #5E2C04;
+        }
+        
+        .art-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .traditional-border {
+            border-bottom: 4px solid #5E2C04;
+        }
+        
+        .kinyarwanda-font {
+            font-family: 'Kigelia African', serif;
+        }
+        
+        .imigongo-bg {
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIGZpbGw9IiMwMDZBNEUiLz48cmVjdCB4PSI1MCIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiBmaWxsPSIjRkNEMTE2Ii8+PHJlY3QgeT0iNTAiIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0iI0M4MTAyRSIvPjxyZWN0IHg9IjUwIiB5PSI1MCIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiBmaWxsPSIjNUUyQzA0Ii8+PC9zdmc+');
+            background-size: 100px 100px;
+            opacity: 0.1;
+        }
+    </style>
+</head>
+<body class="font-sans bg-rwanda-cream">
+    <!-- Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50 traditional-border">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-rwanda-green kinyarwanda-font">
+                    <span class="text-rwanda-red">URUGAMBA</span> Arts
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-rwanda-green hover:text-rwanda-red font-medium">Home</a>
+                    <a href="#problem" class="text-gray-600 hover:text-rwanda-red font-medium">The Challenge</a>
+                    <a href="#solution" class="text-gray-600 hover:text-rwanda-red font-medium">Our Solution</a>
+                    <a href="#prototype" class="text-gray-600 hover:text-rwanda-red font-medium">Progress</a>
+                    <a href="#future" class="text-gray-600 hover:text-rwanda-red font-medium">Future Vision</a>
+                </div>
+                <button class="md:hidden focus:outline-none">
+                    <i class="fas fa-bars text-xl text-rwanda-green"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 1. Homepage Section -->
+    <section id="home" class="hero-section text-white py-24 md:py-36">
+        <div class="container mx-auto px-6 text-center relative">
+            <div class="absolute top-0 left-0 w-full h-full imigongo-bg z-0"></div>
+            <div class="relative z-10">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 kinyarwanda-font">PRESERVING RWANDA'S LIVING HERITAGE</h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Bridging generations through digital innovation and community empowerment</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#problem" class="bg-rwanda-red hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">Explore the Challenge</a>
+                    <a href="#solution" class="bg-rwanda-yellow hover:bg-yellow-600 text-gray-800 font-bold py-3 px-8 rounded-full transition duration-300">See Our Solution</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Entrepreneurial Journey Section -->
+    <section id="problem" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-rwanda-green kinyarwanda-font mb-4">THE DISAPPEARING ARTS</h2>
+                <div class="w-24 h-1 bg-rwanda-red mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm mb-6 border-l-4 border-rwanda-red">
+                        <p class="text-lg italic">"Traditional Rwandan art forms like Imigongo paintings and Intore dance are vanishing faster than we can document them. Each elder we lose takes irreplaceable knowledge with them."</p>
+                        <p class="text-right mt-2 font-semibold text-rwanda-green">— Niyonkuru, 72, Imigongo Master</p>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-rwanda-green text-white rounded-full w-10 h-10 flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-exclamation"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-rwanda-red mb-2">Vanishing Traditions</h3>
+                                <p class="text-gray-700">Imigongo and Intore are disappearing in rural districts (Huye, Musanze, Nyagatare) due to modernization and youth disengagement.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-rwanda-green text-white rounded-full w-10 h-10 flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-rwanda-red mb-2">Economic Impact</h3>
+                                <p class="text-gray-700">Cultural tourism generated $620M in 2023 (36% growth), but declining art forms threaten this revenue stream.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-rwanda-green text-white rounded-full w-10 h-10 flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-rwanda-red mb-2">Oral Tradition Crisis</h3>
+                                <p class="text-gray-700">With knowledge passed orally, we've lost 60% of master artisans in the last decade without proper documentation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="relative">
+                            <img src="https://www.newtimes.co.rw/sites/default/files/styles/mystyle/public/main/articles/2019/09/17/imigongo.jpg" alt="Traditional Imigongo painting with geometric patterns" class="rounded-lg shadow-md h-64 w-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-2 text-center">
+                                <p>Imigongo - Cow Dung Art</p>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <img src="https://www.inyarwanda.com/inkuru/103292/amazing-pictures-of-intore-dancers-at-kigali-convention-centre-103292-full.jpg" alt="Intore dancers performing traditional warrior dance" class="rounded-lg shadow-md h-64 w-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-2 text-center">
+                                <p>Intore Warrior Dance</p>
+                            </div>
+                        </div>
+                        <div class="col-span-2 relative">
+                            <img src="https://www.visitrwanda.com/wp-content/uploads/2019/08/agaseke-baskets.jpg" alt="Traditional Agaseke baskets woven by Rwandan artisans" class="rounded-lg shadow-md h-48 w-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-2 text-center">
+                                <p>Agaseke Basket Weaving</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Solution Section -->
+    <section id="solution" class="py-16 bg-gray-50 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full imigongo-bg z-0"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-rwanda-green kinyarwanda-font mb-4">OUR HYBRID SOLUTION</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Combining digital preservation with community empowerment</p>
+                <div class="w-24 h-1 bg-rwanda-red mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="art-card p-6 rounded-lg">
+                    <div class="text-4xl text-rwanda-green mb-4">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-rwanda-green mb-3">Digital Archive</h3>
+                    <p class="text-gray-700 mb-4">Comprehensive documentation of 5 endangered art forms with 3D scanning and oral history recordings.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-rwanda-red mt-1 mr-2"></i>
+                            <span>High-resolution photography</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-rwanda-red mt-1 mr-2"></i>
+                            <span>Step-by-step creation videos</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-rwanda-red mt-1 mr-2"></i>
+                            <span>Interactive learning modules</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="art-card p-6 rounded-lg">
+                    <div class="text-4xl text-rwanda-green mb-4">
+                        <i class="fas fa-bus-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-rwanda-green mb-3">Mobile Workshops</h3>
+                    <p class="text-gray-700 mb-4">Traveling teams conducting hands-on training in Huye, Musanze, and Nyagatare districts.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-rwanda-red mt-1 mr-2"></i>
+                            <span>Elder-youth apprenticeship programs</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-rwanda-red mt-1 mr-2"></i>
+                            <span>Traditional materials sourcing</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-rwanda-red mt-1 mr-2"></i>
+                            <span>Community cultural festivals</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="art-card p-6 rounded-lg">
+                    <div class="text-4xl text-rwanda-green mb-4">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-rwanda-green mb-3">Economic Pathways</h3>
+                    <p class="text-gray-700 mb-4">Creating sustainable income through cultural tourism and e-commerce platforms.</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-rwanda-red mt-1 mr-2"></i>
+                            <span>Artisan cooperatives</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-rwanda-red mt-1 mr-2"></i>
+                            <span>Digital marketplace</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-rwanda-red mt-1 mr-2"></i>
+                            <span>Cultural experience tours</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="bg-rwanda-green text-white p-8 rounded-xl shadow-lg">
+                <h3 class="text-2xl font-bold text-center mb-6 kinyarwanda-font">OUR IMPACT TIMELINE</h3>
+                <div class="grid grid-cols-4 gap-4 text-center">
+                    <div>
+                        <div class="bg-rwanda-red text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 text-xl font-bold">2023</div>
+                        <p class="text-sm">Needs assessment completed</p>
+                    </div>
+                    <div>
+                        <div class="bg-rwanda-red text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 text-xl font-bold">2024</div>
+                        <p class="text-sm">Digital platform beta launch</p>
+                    </div>
+                    <div>
+                        <div class="bg-rwanda-red text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 text-xl font-bold">2025</div>
+                        <p class="text-sm">Community hubs established</p>
+                    </div>
+                    <div>
+                        <div class="bg-rwanda-red text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 text-xl font-bold">2026</div>
+                        <p class="text-sm">60% self-funding achieved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Prototype Section -->
+    <section id="prototype" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-rwanda-green kinyarwanda-font mb-4">OUR PROGRESS</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Documenting and revitalizing Rwanda's cultural treasures</p>
+                <div class="w-24 h-1 bg-rwanda-red mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-semibold mb-4 text-rwanda-red">Documentation Achievements</h3>
+                    <img src="https://www.ktpress.rw/wp-content/uploads/2020/09/Imigongo-art.jpg" alt="Artisan demonstrating traditional Imigongo techniques" class="rounded-lg mb-4 w-full h-64 object-cover">
+                    <div class="grid grid-cols-3 gap-2 mb-4">
+                        <img src="https://imigongo.com/wp-content/uploads/2021/06/imigongo-art-1.jpg" alt="Close-up of Imigongo patterns" class="rounded h-24 w-full object-cover">
+                        <img src="https://imigongo.com/wp-content/uploads/2021/06/imigongo-art-2.jpg" alt="Traditional Imigongo colors" class="rounded h-24 w-full object-cover">
+                        <img src="https://imigongo.com/wp-content/uploads/2021/06/imigongo-art-3.jpg" alt="Modern Imigongo artwork" class="rounded h-24 w-full object-cover">
+                    </div>
+                    <p>We've documented 78 traditional Imigongo patterns with step-by-step videos from 12 master artisans across Rwanda.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-semibold mb-4 text-rwanda-red">Community Engagement</h3>
+                    <div class="flex items-start mb-4">
+                        <div class="bg-rwanda-green text-white rounded-full w-12 h-12 flex items-center justify-center mr-4 mt-1">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg">Huye District Pilot</h4>
+                            <p class="text-gray-600">Trained 32 youth in traditional art forms with 8 elder masters</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-rwanda-red text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Digital Skills Training</h4>
+                                <p class="text-sm text-gray-600">45 youth trained in photography and e-commerce</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-rwanda-red text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Cultural Festival</h4>
+                                <p class="text-sm text-gray-600">1,200 attendees at Intore dance showcase</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-rwanda-red text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Artisan Income</h4>
+                                <p class="text-sm text-gray-600">$8,200 generated through pilot sales</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-rwanda-green text-white p-8 rounded-xl shadow-lg">
+                <h3 class="text-2xl font-bold text-center mb-8 kinyarwanda-font">FOCUS ART FORMS</h3>
+                <div class="grid sm:grid-cols-5 gap-6">
+                    <div class="art-card p-4 text-center">
+                        <div class="bg-white bg-opacity-20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-paint-brush text-2xl text-rwanda-yellow"></i>
+                        </div>
+                        <h4 class="font-bold mb-1">Imigongo</h4>
+                        <p class="text-sm text-white text-opacity-80">Cow dung paintings</p>
+                    </div>
+                    <div class="art-card p-4 text-center">
+                        <div class="bg-white bg-opacity-20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-music text-2xl text-rwanda-yellow"></i>
+                        </div>
+                        <h4 class="font-bold mb-1">Intore</h4>
+                        <p class="text-sm text-white text-opacity-80">Warrior dance</p>
+                    </div>
+                    <div class="art-card p-4 text-center">
+                        <div class="bg-white bg-opacity-20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-tshirt text-2xl text-rwanda-yellow"></i>
+                        </div>
+                        <h4 class="font-bold mb-1">Agaseke</h4>
+                        <p class="text-sm text-white text-opacity-80">Basket weaving</p>
+                    </div>
+                    <div class="art-card p-4 text-center">
+                        <div class="bg-white bg-opacity-20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-drum text-2xl text-rwanda-yellow"></i>
+                        </div>
+                        <h4 class="font-bold mb-1">Ingoma</h4>
+                        <p class="text-sm text-white text-opacity-80">Traditional drums</p>
+                    </div>
+                    <div class="art-card p-4 text-center">
+                        <div class="bg-white bg-opacity-20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-ring text-2xl text-rwanda-yellow"></i>
+                        </div>
+                        <h4 class="font-bold mb-1">Ibisingizo</h4>
+                        <p class="text-sm text-white text-opacity-80">Royal poetry</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Reflection and Future Plans -->
+    <section id="future" class="py-16 bg-gray-50 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full imigongo-bg z-0"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-rwanda-green kinyarwanda-font mb-4">LESSONS & VISION</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Our journey and roadmap for Rwanda's cultural future</p>
+                <div class="w-24 h-1 bg-rwanda-red mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 mb-16">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 text-rwanda-red border-b-2 border-rwanda-green pb-2">Key Learnings</h3>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <div class="flex items-start">
+                                <div class="bg-rwanda-green text-white rounded-full w-10 h-10 flex items-center justify-center mr-4 mt-1">
+                                    1
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-1">Intergenerational Bridges</h4>
+                                    <p class="text-gray-700">Pairing youth with elders through digital tools created unexpected bonds and better knowledge transfer.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <div class="flex items-start">
+                                <div class="bg-rwanda-green text-white rounded-full w-10 h-10 flex items-center justify-center mr-4 mt-1">
+                                    2
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-1">Modern-Traditional Fusion</h4>
+                                    <p class="text-gray-700">Youth engagement tripled when we incorporated contemporary designs into traditional art forms.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <div class="flex items-start">
+                                <div class="bg-rwanda-green text-white rounded-full w-10 h-10 flex items-center justify-center mr-4 mt-1">
+                                    3
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-1">Economic Incentives</h4>
+                                    <p class="text-gray-700">Creating visible income opportunities became our most effective recruitment tool.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 text-rwanda-red border-b-2 border-rwanda-green pb-2">Future Goals</h3>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-rwanda-red text-white rounded-full w-12 h-12 flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Cultural Hubs</h4>
+                                <p class="text-gray-600">Establish permanent centers in Huye, Musanze, and Nyagatare by 2025 serving 500+ artisans annually.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start mb-4">
+                            <div class="bg-rwanda-red text-white rounded-full w-12 h-12 flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Global Marketplace</h4>
+                                <p class="text-gray-600">Launch e-commerce platform connecting Rwandan artisans with international buyers.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-rwanda-red text-white rounded-full w-12 h-12 flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">School Curriculum</h4>
+                                <p class="text-gray-600">Partner with MINEDUC to integrate traditional arts into national education by 2026.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-r from-rwanda-green to-rwanda-red text-white p-8 rounded-xl shadow-xl text-center">
+                <h3 class="text-2xl md:text-3xl font-bold mb-4 kinyarwanda-font">JOIN OUR MOVEMENT</h3>
+                <p class="text-xl mb-6 max-w-2xl mx-auto">Help preserve Rwanda's cultural heritage for future generations</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#" class="bg-white hover:bg-gray-100 text-rwanda-green font-bold py-3 px-8 rounded-full transition duration-300">Partner With Us</a>
+                    <a href="#" class="bg-rwanda-yellow hover:bg-yellow-600 text-gray-800 font-bold py-3 px-8 rounded-full transition duration-300">Donate Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-rwanda-green text-white py-12 traditional-border">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 kinyarwanda-font"><span class="text-rwanda-yellow">URUGAMBA</span> Arts</h3>
+                    <p class="mb-4 text-white text-opacity-80">Preserving Rwanda's cultural heritage through innovation and community.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-rwanda-yellow text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white hover:text-rwanda-yellow text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white hover:text-rwanda-yellow text-xl"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-white text-opacity-80 hover:text-rwanda-yellow">Home</a></li>
+                        <li><a href="#problem" class="text-white text-opacity-80 hover:text-rwanda-yellow">The Challenge</a></li>
+                        <li><a href="#solution" class="text-white text-opacity-80 hover:text-rwanda-yellow">Our Solution</a></li>
+                        <li><a href="#prototype" class="text-white text-opacity-80 hover:text-rwanda-yellow">Progress</a></li>
+                        <li><a href="#future" class="text-white text-opacity-80 hover:text-rwanda-yellow">Future Vision</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Contact Us</h4>
+                    <ul class="space-y-2 text-white text-opacity-80">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-rwanda-yellow"></i>
+                            <span>Kigali, Rwanda</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-2 text-rwanda-yellow"></i>
+                            <span>+250 788 123 456</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-2 text-rwanda-yellow"></i>
+                            <span>info@urugamba.rw</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Newsletter</h4>
+                    <p class="text-white text-opacity-80 mb-4">Subscribe for updates on our preservation efforts.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your Email" class="px-4 py-2 rounded-l-lg w-full text-gray-800 focus:outline-none">
+                        <button type="submit" class="bg-rwanda-yellow text-gray-800 px-4 py-2 rounded-r-lg font-medium">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-white border-opacity-20 mt-8 pt-8 text-center text-white text-opacity-70">
+                <p>&copy; 2023 Urugamba Arts. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('.md\\:hidden');
+            const mobileMenu = document.querySelector('.md\\:flex');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('flex');
+                mobileMenu.classList.toggle('flex-col');
+                mobileMenu.classList.toggle('absolute');
+                mobileMenu.classList.toggle('bg-white');
+                mobileMenu.classList.toggle('w-full');
+                mobileMenu.classList.toggle('left-0');
+                mobileMenu.classList.toggle('px-6');
+                mobileMenu.classList.toggle('py-4');
+                mobileMenu.classList.toggle('shadow-md');
+                mobileMenu.classList.toggle('space-y-4');
+                mobileMenu.classList.toggle('space-x-8');
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Close mobile menu if open
+                        if (!mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                            mobileMenu.classList.remove('flex', 'flex-col', 'absolute', 'bg-white', 'w-full', 
+                                'left-0', 'px-6', 'py-4', 'shadow-md', 'space-y-4');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
